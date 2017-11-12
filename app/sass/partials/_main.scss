@@ -1,0 +1,292 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.hidden {
+  display: none!important;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+
+.pageHolder {
+  padding: 120px 0;
+}
+
+.mainContainer {
+  width: 1170px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.btnPrimary {
+  background: $mainColor;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 13px 40px;
+  display: inline-block;
+  border: 1px solid $mainColor;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: .3s;
+  white-space: nowrap;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+    background: darken($mainColor, 5%);
+    border: 1px solid darken($mainColor, 5%);
+  }
+  &:focus,
+  &:active {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+.btnWhite {
+  background: #fff;
+  color: $mainColor;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 13px 40px;
+  display: inline-block;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: .3s;
+  white-space: nowrap;
+  &:hover {
+    color: $mainColor;
+    text-decoration: none;
+    background: darken(#fff, 5%);
+    border: 1px solid darken(#fff, 5%);
+  }
+  &:focus,
+  &:active {
+    text-decoration: none;
+    color: $mainColor;
+  }
+}
+
+.preHeader {
+  background: rgba(0,0,0,.3);
+  padding: 5px 0;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    .socList {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      list-style: none;
+      a {
+        color: #fff;
+        font-size: 18px;
+      }
+      li + li {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+.main {
+  height: 2000px;
+}
+
+.mainHeader {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  transition: .3s;
+  background: $mainColor;
+  .mainMenuHolder {
+    padding: 10px 0;
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &.stickyHeader {
+    &.fixed {
+      top: -100%;
+      position: fixed;
+      .preHeader {
+        display: none;
+      }
+    }
+    &.in {
+      -webkit-box-shadow: 0 4px 13px 0 rgba(51, 51, 51, 0.6);
+      box-shadow: 0 4px 13px 0 rgba(51, 51, 51, 0.6);
+      background: #000;
+      top: 0;
+    }
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    a {
+      display: block;
+      color: #fff;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 300;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: .3s;
+      &:hover {
+        border-bottom-color: $mainColor;
+      }
+    }
+    li {
+      &.active {
+        a {
+          border-bottom-color: $mainColor;
+        }
+      }
+    }
+    li + li {
+      margin-left: 15px;
+    }
+  }
+  .logo {
+    font-size: 36px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .menuHolder {
+    display: flex;
+  }
+  .cartBtn {
+    color: #fff;
+    font-size: 32px;
+    margin-left: 30px;
+  }
+}
+
+.menuTrigger {
+  display: block;
+  width: 40px;
+  height: 24px;
+  span {
+    height: 4px;
+    background: #fff;
+    display: block;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+  }
+  span + span {
+    margin-top: 6px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

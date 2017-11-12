@@ -1,0 +1,40 @@
+@media (max-width: 991px) {
+  .mainContainer {
+    width: 750px;
+  }
+  .mainHeader {
+    .wrapper {
+      flex-wrap: wrap;
+      .logo {
+        order: 1;
+      }
+      .menu {
+        order: 3;
+        width: 100%;
+        display: block;
+        overflow-y: hidden;
+        max-height: 0;
+        transition: max-height .5s;
+        transition-timing-function: ease;
+        li {
+          a {
+            border-bottom: 0;
+            padding: 10px 0;
+          }
+        }
+        li + li {
+          margin-left: 0;
+        }
+        &.in {
+          max-height: 800px;
+          padding: 15px 0;
+        }
+      }
+      .menuTrigger {
+        order: 2;
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
