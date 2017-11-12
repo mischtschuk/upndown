@@ -38,3 +38,16 @@ $( document ).ready(function(){
 });
 
 //end
+
+(function($){
+
+    "use strict";
+
+    $(document).ready(function () {
+        $('.ball a').click(function () {
+            if(!$(this).hasClass('open'))
+                $(this).toggleClass('open');
+        });
+    });
+
+})(jQuery);
