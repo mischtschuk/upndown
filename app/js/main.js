@@ -51,3 +51,88 @@ $( document ).ready(function(){
     });
 
 })(jQuery);
+
+
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var player;
+function onYouTubeIframeAPIReady2() {
+    player = new YT.Player('player', {
+        playerVars: { 'rel': 0, 'loop': 1, 'showinfo': 0},
+        height: '100%',
+        width: '100%',
+        videoId: 'yRdeMrswT5o',
+        rel: 0,
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
+
+// 4. The API will call this function when the video player is ready.
+function onPlayerReady(event) {
+    event.target.playVideo();
+
+    var video = $('#videoHolder');
+
+}
+
+var done = false;
+function onPlayerStateChange(event) {
+
+}
+function stopVideo() {
+    player.stopVideo();
+}
+
+//sticky video
+
+$('#videoTrigger').on('click', function(){
+    var video = $('#videoHolder');
+    video.removeClass('hidden');
+    onYouTubeIframeAPIReady2();
+
+    $('#max').on('click', function(e){
+        e.preventDefault();
+
+        var back = $('.backDrop');
+
+
+        if(video.hasClass('in')) {
+            return false;
+        } else {
+            video.addClass('in');
+            player.setVolume(100);
+        }
+    });
+
+    $('#min').on('click', function(e){
+        e.preventDefault();
+
+        if(video.hasClass('in')) {
+            video.removeClass('in');
+            player.setVolume(0);
+        } else {
+            return false;
+        }
+    });
+
+    $('#closeVideo').on('click', function(e){
+        e.preventDefault();
+
+        player.destroy();
+
+        video.addClass('hidden');
+    })
+
+});
+
+
+//End
