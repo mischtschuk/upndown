@@ -136,3 +136,32 @@ $('#videoTrigger').on('click', function(){
 
 
 //End
+
+//cart trigger
+$( document ).ready(function(){
+    function openCart(trigger){
+        trigger.on('click', function(e) {
+            var cart = $('.stickyCartHolder');
+            var back = $('.cartBackDrop');
+            e.preventDefault();
+            console.log('fuck');
+            cart.addClass('in');
+            back.addClass('in');
+        });
+    }
+
+    function closeCart(trigger){
+        trigger.on('click', function(e) {
+            var cart = $('.stickyCartHolder');
+            var back = $('.cartBackDrop');
+            e.preventDefault();
+            console.log('fuck2');
+            cart.removeClass('in');
+            back.removeClass('in');
+        });
+    }
+
+    openCart($('#cartTrigger'));
+    closeCart($('.cartBackDrop'));
+});
+//end
