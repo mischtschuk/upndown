@@ -144,7 +144,6 @@ $( document ).ready(function(){
             var cart = $('.stickyCartHolder');
             var back = $('.cartBackDrop');
             e.preventDefault();
-            console.log('fuck');
             cart.addClass('in');
             back.addClass('in');
         });
@@ -155,7 +154,6 @@ $( document ).ready(function(){
             var cart = $('.stickyCartHolder');
             var back = $('.cartBackDrop');
             e.preventDefault();
-            console.log('fuck2');
             cart.removeClass('in');
             back.removeClass('in');
         });

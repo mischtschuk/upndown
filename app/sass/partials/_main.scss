@@ -111,7 +111,7 @@ body {
   display: block;
   width: 165px;
   height: 45px;
-  background: url("../img/logo2.png") no-repeat;
+  background: url("../img/logo1.png") no-repeat;
   background-size: contain;
   background-position: center;
 }
@@ -184,6 +184,28 @@ body {
     align-items: center;
     justify-content: space-between;
     color: #fff;
+    .right {
+      display: flex;
+    }
+    .localMenu {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      list-style: none;
+      margin-right: 30px;
+      a {
+        display: block;
+        color: #fff;
+        font-size: 12px;
+        //text-transform: uppercase;
+        font-weight: 300;
+        text-decoration: none;
+        transition: .3s;
+      }
+      li + li {
+        margin-left: 15px;
+      }
+    }
     .socList {
       display: flex;
       align-items: center;
@@ -205,7 +227,7 @@ body {
   width: 100%;
   z-index: 100;
   transition: .3s;
-  background: $mainColor;
+  background: transparent;
   .mainMenuHolder {
     padding: 18px 0;
   }
@@ -220,6 +242,11 @@ body {
       position: fixed;
       .preHeader {
         display: none;
+      }
+      .logo {
+        background: url("../img/logo2.png") no-repeat;
+        background-size: contain;
+        background-position: center;
       }
     }
     &.in {
@@ -290,7 +317,6 @@ body {
 }
 
 .productBlock {
-  padding-top: 110px;
   background: url("../img/bg2.png") repeat;
   .wrapper {
     display: flex;
@@ -609,16 +635,7 @@ body {
       padding: 0 15px;
     }
   }
-  .snowfall {
-    background-image: url(../img/s1.png), url(../img/s2.png), url(../img/s3.png);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
-    animation: snow 10s linear infinite;
-  }
+
   .socList {
     display: flex;
     align-items: center;
@@ -726,6 +743,17 @@ body {
   0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
   50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
   100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+
+.snowfall {
+  background-image: url(../img/s1.png), url(../img/s2.png), url(../img/s3.png);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  animation: snow 10s linear infinite;
 }
 
 .quickCheckoutHolder {
@@ -887,12 +915,61 @@ body {
   right: 0;
   top: 0;
   overflow-y: auto;
+  overflow-x: hidden;
   z-index: 9999;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
   transform: translateX(100%);
   transition: transform .3s;
   &.in {
     transform: translateX(0);
+  }
+  .heading {
+    text-align: center;
+    padding: 25px;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #a6a6a6;
+  }
+  .productTableHolder {
+    padding: 15px 10px;
+    border-bottom: 1px solid #a6a6a6;
+    display: flex;
+    .imgHolder {
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      img {
+        max-width: 100%;
+      }
+    }
+    .description {
+      font-size: 15px;
+      padding: 10px;
+    }
+    .deleteButton {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      a {
+        color: #999;
+      }
+    }
+  }
+  .totalHolder {
+    padding: 15px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .qnt {
+      margin-left: 5px;
+    }
+  }
+  .btnHolder {
+    text-align: center;
+    padding: 15px;
   }
 }
 
@@ -914,6 +991,10 @@ body {
   }
 }
 
-
+.introSlide {
+  position: relative;
+  background: $mainColor;
+  height: 500px;
+}
 
 
