@@ -534,7 +534,8 @@ body {
   background: url("../img/bg2.png") repeat;
   -webkit-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.6);
           box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.6);
-  position: relative; }
+  position: relative;
+  border-bottom: 0; }
   .treeBlock .wrapper {
     display: -webkit-box;
     display: -webkit-flex;
@@ -625,7 +626,10 @@ body {
     width: 50%;
     font-family: 'Roboto Slab', "Helvetica Neue",Helvetica,Arial,sans-serif; }
     .treeBlock .greeting .content {
-      padding-left: 60px; }
+      padding-left: 60px;
+      display: none; }
+      .treeBlock .greeting .content.active {
+        display: block; }
     .treeBlock .greeting .gh1 {
       display: block;
       font-size: 39px;

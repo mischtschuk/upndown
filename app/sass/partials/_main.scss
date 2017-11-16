@@ -507,6 +507,7 @@ body {
   background: url("../img/bg2.png") repeat;
   box-shadow: 0 0 15px 1px rgba(0,0,0,0.6);
   position: relative;
+  border-bottom: 0;
   .wrapper {
     display: flex;
     align-items: center;
@@ -581,6 +582,10 @@ body {
     font-family: 'Roboto Slab', "Helvetica Neue",Helvetica,Arial,sans-serif;
     .content {
       padding-left: 60px;
+      display: none;
+      &.active {
+        display: block;
+      }
     }
     .gh1 {
       display: block;
