@@ -171,7 +171,7 @@ $(document).ready(function () {
 
     //smoothscroll
     $('#menu a').on('click', function (e) {
-        e.preventDefault();
+        // e.preventDefault();
         $('#menu li').each(function () {
             $(this).removeClass('active');
         });
@@ -181,6 +181,7 @@ $(document).ready(function () {
             'scrollTop': $($(this).attr('href')).offset().top - 81
         }, 500, 'swing', function () {
             window.location.hash = $(this).attr('href');
+            history.pushState({}, "", this.href);
         });
     });
 
@@ -222,3 +223,14 @@ $(document).ready(function(){
 });
 
 //end
+
+//product slider
+
+$(document).ready(function(){
+    $("a.zoom").fancybox({prevEffect:'fade', nextEffect:'fade'});
+});
+
+
+
+//end
+

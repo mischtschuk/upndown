@@ -259,6 +259,9 @@ body {
           color: #2d2d2d;
         }
       }
+      .cartBtn {
+          color: #2d2d2d;
+      }
     }
   }
   .menu {
@@ -326,7 +329,10 @@ body {
     display: flex;
     .imgList {
       list-style: none;
-      margin-right: 30px;
+      margin-right: 10px;
+      height: 525px;
+      overflow-y: auto;
+      padding-right: 30px;
       a {
         display: block;
         width: 70px;
@@ -342,11 +348,17 @@ body {
       }
     }
     .img {
-      width: 350px;
+      width: 450px;
       height: 525px;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      img{
+        height: 100%;
+        width: auto;
+        margin: 0px auto;
+        display: block;
+      }
     }
   }
   .productDescription {
@@ -370,7 +382,7 @@ body {
 }
 
 .videoBlock {
-  background: url("../img/videoBg.jpg") no-repeat;
+  background: url("../img/videoBg.png") no-repeat;
   background-size: cover;
   //background-position: center;
   position: relative;
@@ -494,13 +506,14 @@ body {
 }
 
 .container-card-plus {
-  background: url(../img/card-plus.jpg);
+  background: url(../img/card-container.png);
   background-size: cover;
   background-position: center center;
   width: 100%;
   z-index: 20;
   max-height: 400px;
   height: 400px;
+  position: relative;
 }
 
 .treeBlock {
@@ -667,6 +680,15 @@ body {
     a {
       color: #fff;
       padding: 5px 0;
+      font-size: 16px;
+      line-height: 26px;
+      cursor: pointer;
+      text-decoration: none;
+      i {
+        height: 16px;
+        width: 16px;
+        margin-right: 5px;
+      }
     }
   }
   .contactUsFormHolder {
@@ -915,7 +937,8 @@ body {
 .stickyCartHolder {
   width: 320px;
   height: 100%;
-  background: #e6e6e6;
+  background: linear-gradient(to top, rgb(240, 0, 0), rgb(220, 40, 30));
+  color: #fff;
   position: fixed;
   right: 0;
   top: 0;
@@ -933,11 +956,11 @@ body {
     padding: 25px;
     font-size: 22px;
     text-transform: uppercase;
-    border-bottom: 1px solid #a6a6a6;
+    border-bottom: 1px solid #fff;
   }
   .productTableHolder {
-    padding: 15px 10px;
-    border-bottom: 1px solid #a6a6a6;
+    padding: 15px 25px;
+    border-bottom: 1px solid #fff;
     display: flex;
     .imgHolder {
       padding: 5px;
@@ -958,23 +981,31 @@ body {
       align-items: center;
       font-size: 12px;
       a {
-        color: #999;
+        color: #fff;
       }
     }
   }
   .totalHolder {
-    padding: 15px;
-    text-align: right;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 25px;
+    text-align: center;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     .qnt {
-      margin-left: 5px;
+      margin-left: 10px;
+      font-size: 1.5em;
     }
   }
   .btnHolder {
     text-align: center;
     padding: 15px;
+    .btnGhost{
+      width:100%;
+      text-transform: uppercase;
+      border: 2px solid #fff;
+    }
   }
 }
 

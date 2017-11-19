@@ -288,6 +288,10 @@ body {
     top: 0; }
     .mainHeader.stickyHeader.in .menu a {
       color: #2d2d2d; }
+
+    .mainHeader.stickyHeader.in .cartBtn {
+      color: #2d2d2d; }
+
   .mainHeader .menu {
     display: -webkit-box;
     display: -webkit-flex;
@@ -359,7 +363,10 @@ body {
     display: flex; }
     .productBlock .productImgHolder .imgList {
       list-style: none;
-      margin-right: 30px; }
+      margin-right: 10px;
+      height: 525px;
+      overflow-y: auto;
+      padding-right: 30px; }
       .productBlock .productImgHolder .imgList a {
         display: block;
         width: 70px;
@@ -370,11 +377,16 @@ body {
       .productBlock .productImgHolder .imgList li + li a {
         margin-top: 15px; }
     .productBlock .productImgHolder .img {
-      width: 350px;
+      width: 450px;
       height: 525px;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat; }
+      .productBlock .productImgHolder .img img{
+        height: 100%;
+        width: auto;
+        margin: 0px auto;
+        display: block;}
   .productBlock .productDescription {
     padding-left: 60px; }
     .productBlock .productDescription .price {
@@ -390,7 +402,7 @@ body {
         margin-top: 10px; }
 
 .videoBlock {
-  background: url("../img/videoBg.jpg") no-repeat;
+  background: url("../img/videoBg.png") no-repeat;
   background-size: cover;
   position: relative; }
   .videoBlock .h2 {
@@ -522,13 +534,14 @@ body {
   margin-bottom: 20px; }
 
 .container-card-plus {
-  background: url(../img/card-plus.jpg);
+  background: url(../img/card-container.png);
   background-size: cover;
   background-position: center center;
   width: 100%;
   z-index: 20;
   max-height: 400px;
-  height: 400px; }
+  height: 400px;
+  position: relative;}
 
 .treeBlock {
   background: url("../img/bg2.png") repeat;
@@ -707,7 +720,15 @@ body {
     list-style: none; }
     .mainFooter .localMenu a {
       color: #fff;
-      padding: 5px 0; }
+      padding: 5px 0;
+      font-size: 16px;
+      line-height: 26px;
+      cursor: pointer;
+      text-decoration: none;  }
+      .mainFooter .localMenu a i{
+        height: 16px;
+        width: 16px;
+        margin-right: 5px;}
   .mainFooter .contactUsFormHolder .formControl {
     width: 100%;
     border: 1px solid #fff;
@@ -985,7 +1006,8 @@ body {
 .stickyCartHolder {
   width: 320px;
   height: 100%;
-  background: #e6e6e6;
+  background: linear-gradient(to top, rgb(240, 0, 0), rgb(220, 40, 30));
+  color: #fff;
   position: fixed;
   right: 0;
   top: 0;
@@ -1010,10 +1032,10 @@ body {
     padding: 25px;
     font-size: 22px;
     text-transform: uppercase;
-    border-bottom: 1px solid #a6a6a6; }
+    border-bottom: 1px solid #fff; }
   .stickyCartHolder .productTableHolder {
-    padding: 15px 10px;
-    border-bottom: 1px solid #a6a6a6;
+    padding: 15px 25px;
+    border-bottom: 1px solid #fff;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1037,7 +1059,7 @@ body {
         max-width: 100%; }
     .stickyCartHolder .productTableHolder .description {
       font-size: 15px;
-      padding: 10px; }
+      padding: 25px; }
     .stickyCartHolder .productTableHolder .deleteButton {
       display: -webkit-box;
       display: -webkit-flex;
@@ -1049,10 +1071,12 @@ body {
               align-items: center;
       font-size: 12px; }
       .stickyCartHolder .productTableHolder .deleteButton a {
-        color: #999; }
+        color: #fff; }
   .stickyCartHolder .totalHolder {
-    padding: 15px;
-    text-align: right;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 25px;
+    text-align: center;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1061,15 +1085,22 @@ body {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end; }
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     .stickyCartHolder .totalHolder .qnt {
-      margin-left: 5px; }
+      margin-left: 10px;
+      font-size: 1.5em; }
   .stickyCartHolder .btnHolder {
     text-align: center;
     padding: 15px; }
+
+    .stickyCartHolder .btnHolder .btnGhost{
+      width:100%;
+      text-transform: uppercase;
+      border: 2px solid #fff;
+    }
 
 .cartBackDrop {
   position: fixed;
@@ -1143,3 +1174,22 @@ body {
 @media (max-width: 767px) {
   .mainContainer {
     width: 100%; } }
+
+
+
+
+
+
+
+
+
+/*ADDONS*/
+.btnGhost:focus{
+  text-decoration: none;
+  color:#fff;
+}
+
+.stickyCartHolder .btnHolder .btnGhost:focus{
+  color:#ed0505;
+  background: #fff;
+}
