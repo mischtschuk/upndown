@@ -1,3 +1,62 @@
 @media (max-width: 480px) {
-
+  .mainFooter {
+    .copyrightRow {
+      .wrapper {
+        flex-wrap: wrap;
+        .cardsHolder {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .copyrightHolder {
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+    .content {
+      .column {
+        &.menuColumn {
+          flex-wrap: wrap;
+          .menuHolder {
+            width: 100%;
+          }
+          .menuHolder + .menuHolder {
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+  .descriptionFiguresBlock {
+    .descriptionFiguresHolder {
+      .figure {
+        width: 100%;
+      }
+    }
+  }
+  .productBlock {
+    .productImgHolder {
+      .imgList {
+        width: 290px;
+      }
+    }
+  }
+  .treeBlock {
+    .ball {
+      width: 80px;
+      height: 80px;
+      span {
+        top: 30px;
+        left: 20px;
+        font-size: 12px;
+      }
+      a {
+        width: 80px;
+        height: 80px;
+        margin: 0;
+      }
+    }
+  }
 }

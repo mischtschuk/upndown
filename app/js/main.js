@@ -24,17 +24,32 @@ window.onscroll = function() {
 
 //mobile menu
 
-function toggleMenu(trigger, menu) {
+function openMenu(trigger, menu) {
     trigger.on('click', function(e) {
         e.preventDefault();
-        menu.toggleClass('in');
+        menu.addClass('in');
+    })
+}
+
+function closeMenu(trigger, menu) {
+    trigger.on('click', function(e) {
+        e.preventDefault();
+        menu.addClass('out');
+        setTimeout(function(){
+            menu.removeClass('in');
+            menu.removeClass('out');
+        }, 400);
     })
 }
 
 $( document ).ready(function(){
     var mobTrigger = $('#menuTrigger');
-    var mobMenu = $('#menu');
-    toggleMenu(mobTrigger, mobMenu);
+    var closeTrigger = $('#closeTrigger');
+    var mobMenu = $('#menu').parent();
+    var menuItems = $('#menu a');
+    openMenu(mobTrigger, mobMenu);
+    closeMenu(closeTrigger, mobMenu);
+    closeMenu(menuItems, mobMenu);
 });
 
 //end
@@ -171,17 +186,18 @@ $(document).ready(function () {
 
     //smoothscroll
     $('#menu a').on('click', function (e) {
-        // e.preventDefault();
-        $('#menu li').each(function () {
-            $(this).removeClass('active');
+        var el = $(this);
+        e.preventDefault();
+        $('#menu li a').each(function () {
+            $(this).parent().removeClass('active');
         });
         $(this).parent().addClass('active');
 
         $('html, body').animate({
-            'scrollTop': $($(this).attr('href')).offset().top - 81
+            'scrollTop': $(el.attr('href')).offset().top
         }, 500, 'swing', function () {
-            window.location.hash = $(this).attr('href');
-            history.pushState({}, "", this.href);
+            window.location.hash = el.attr('href');
+            history.pushState({}, "", el.attr('href'));
         });
     });
 

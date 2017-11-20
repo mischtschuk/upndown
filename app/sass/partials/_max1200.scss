@@ -6,4 +6,34 @@
   .pageHolder {
     padding: 80px 0;
   }
+  .mainFooter {
+    .content {
+      flex-wrap: wrap;
+      .column {
+        width: 100%;
+        &.infoColumn {
+          width: 50%;
+          margin-bottom: 30px;
+        }
+        &.menuColumn {
+          display: flex;
+          width: 50%;
+          .menuHolder {
+            width: 50%;
+          }
+          .menuHolder + .menuHolder {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+  .descriptionFiguresBlock {
+    .wrapper {
+      justify-content: center;
+    }
+    .bgHolder {
+      background: none;
+    }
+  }
 }

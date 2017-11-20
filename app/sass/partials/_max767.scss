@@ -2,4 +2,86 @@
   .mainContainer {
     width: 100%;
   }
+  .mainFooter {
+    .content {
+      flex-wrap: wrap;
+      .column {
+        width: 100%;
+        &.infoColumn {
+          width: 100%;
+        }
+        &.menuColumn {
+          width: 100%;
+          margin-bottom: 30px;
+          .menuHolder {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+  .quickCheckoutHolder {
+    .boldHeading {
+      font-size: 28px;
+    }
+  }
+  .boldHeading {
+    font-size: 36px;
+  }
+  .styledHeading {
+    font-size: 34px;
+    line-height: normal;
+  }
+  .descriptionFiguresBlock {
+    .descriptionFiguresHolder {
+      .figure {
+        flex-wrap: wrap;
+      }
+      .icoHolder {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+      }
+      .caption {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  .productBlock {
+    .productImgHolder {
+      flex-wrap: wrap;
+      justify-content: center;
+      .imgList {
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-right: 0;
+        margin-right: 0;
+        overflow: visible;
+        overflow-x: auto;
+        order: 2;
+        li + li a {
+          margin-top: 0px;
+          margin-left: 15px;
+        }
+      }
+      .img {
+        margin-bottom: 30px;
+        width: 100%;
+      }
+    }
+  }
+  .preHeader {
+    .wrapper {
+      .right {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+  .container-card-plus {
+    height: 200px;
+  }
 }

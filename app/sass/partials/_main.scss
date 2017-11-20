@@ -235,6 +235,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    .menuContainer {
+      display: flex;
+    }
   }
   &.stickyHeader {
     &.fixed {
@@ -349,14 +352,12 @@ body {
     }
     .img {
       width: 450px;
-      height: 525px;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       img{
-        height: 100%;
-        width: auto;
-        margin: 0px auto;
+        max-width: 100%;
+        margin: 0 auto;
         display: block;
       }
     }
@@ -384,7 +385,6 @@ body {
 .videoBlock {
   background: url("../img/videoBg.png") no-repeat;
   background-size: cover;
-  //background-position: center;
   position: relative;
   .h2 {
     font-size: 36px;
@@ -436,7 +436,6 @@ body {
   .heading {
     color: #fff;
     text-align: center;
-    margin-bottom: 45px;
   }
 }
 
@@ -469,6 +468,11 @@ body {
       font-size: 54px;
       margin-right: 15px;
       color: #76808b;
+      width: 60px;
+      text-align: center;
+    }
+    .caption {
+      width: calc(100% - 75px);
     }
     h3 {
       margin: 0 0 5px 0;
@@ -718,6 +722,9 @@ body {
   }
   .menuColumn {
     width: 30%;
+    .menuHolder + .menuHolder {
+      margin-top: 30px;
+    }
   }
   .copyrightRow {
     position: relative;
@@ -1030,7 +1037,23 @@ body {
 .introSlide {
   position: relative;
   background: $mainColor;
-  height: 500px;
+  height: 120px;
 }
 
+@keyframes menuAnimIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
+@keyframes menuAnimOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
