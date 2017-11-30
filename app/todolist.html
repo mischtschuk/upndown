@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/todolist.css">
+</head>
+<body>
+
+<header class="mainHeader stickyHeader">
+    <div class="preHeader">
+        <div class="mainContainer">
+            <div class="wrapper">
+                <div class="left">
+                    <div class="text">Lorem ipsum dolor sit amet.</div>
+                </div>
+                <div class="right">
+                    <ul class="socList">
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mainMenuHolder">
+        <div class="mainContainer">
+            <div class="wrapper">
+                <a href="#" class="logo"></a>
+                <div class="menuHolder">
+                    <ul class="menu" id="menu">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Clients</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                    <a href="#" class="cartBtn">
+                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <a href="#" class="menuTrigger visible-xs visible-sm" id="menuTrigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="main">
+    <div class="todolistBlock">
+        <div class="mainContainer">
+            <div class="pageHolder">
+                <div class="wrapper">
+                    <div class="tabToDoHeader">
+                        <div class="toDoListCaption">Christmas To Do List</div>
+                        <ul class="toDoListNav nav nav-tabs" id="toDoList" role="tablist">
+                            <li role="presentation" class="active">
+                                <a href="#easy" id="easy-tab" role="tab" data-toggle="tab" aria-controls="easy" aria-expanded="true">Easy</a>
+                            </li>
+                            <li role="presentation" class="">
+                                <a href="#medium" role="tab" id="medium-tab" data-toggle="tab" aria-controls="medium" aria-expanded="false">Medium</a>
+                            </li>
+                            <li role="presentation" class="">
+                                <a href="#hard" role="tab" id="hard-tab" data-toggle="tab" aria-controls="hard" aria-expanded="false">Hard</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="toDoListContent">
+                        <div class="tab-pane fade active in" role="tabpanel" id="easy" aria-labelledby="easy-tab">
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="mediaContainer">
+                                        <img alt="mail a letter to santa" class="media-responsive" src="img/tasks/mail_to_santa.png">
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Mail a letter to Santa</h4>
+                                    Choose a method of sending: either by snail mail or e-mail.  Write down your wishes. Let your family members look the letter through and add their wishes as well. Send.
+                                </div>
+                            </div>
+
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="mediaContainer">
+                                        <img alt="mail a letter to santa" class="media-responsive" src="img/tasks/mail_to_santa.png">
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Mail a letter to Santa</h4>
+                                    Choose a method of sending: either by snail mail or e-mail.  Write down your wishes. Let your family members look the letter through and add their wishes as well. Send.
+                                </div>
+                            </div>
+
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="mediaContainer">
+                                        <img alt="mail a letter to santa" class="media-responsive" src="img/tasks/mail_to_santa.png">
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Mail a letter to Santa</h4>
+                                    Choose a method of sending: either by snail mail or e-mail.  Write down your wishes. Let your family members look the letter through and add their wishes as well. Send.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" role="tabpanel" id="medium" aria-labelledby="medium-tab">
+                            <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+                        </div>
+                        <div class="tab-pane fade" role="tabpanel" id="hard" aria-labelledby="hard-tab">
+                            <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<footer class="mainFooter">
+    <div class="snowfall"></div>
+    <div class="mainContainer">
+        <div class="content">
+            <div class="column infoColumn">
+                <div class="columnHeading">About Us</div>
+                <a href="#" class="logo"></a>
+                <div class="text">Up & Down is a new vision in gifts for you and your friends. Hight quality, amazing design, make with love.</div>
+                <ul class="socList">
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="column menuColumn">
+                <div class="columnHeading">Info</div>
+                <ul class="localMenu">
+                    <li><a href="#">Menu item 1</a></li>
+                    <li><a href="#">Menu item with long name</a></li>
+                    <li><a href="#">Menu item 3</a></li>
+                    <li><a href="#">Menu item 4</a></li>
+                    <li><a href="#">Menu item 5</a></li>
+                    <li><a href="#">Menu item 6</a></li>
+                    <li><a href="#">Menu item 7</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <div class="columnHeading">Contact Us</div>
+                <form action="">
+                    <div class="contactUsFormHolder">
+                        <input type="text" class="formControl" placeholder="Name">
+                        <input type="email" class="formControl" placeholder="Email">
+                        <textarea rows="5" class="formControl" placeholder="Message"></textarea>
+                        <div class="btnHolder">
+                            <a href="#" class="btnGhost">
+                                Send
+                                <i class="fa fa-paper-plane"></i>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyrightRow">
+        <div class="mainContainer">
+            <div class="wrapper">
+                <div class="cardsHolder">
+                    <img src="img/cards.png" alt="">
+                </div>
+                <div class="copyrightHolder">© Up & Down LLC, 2017. All rights reserved.</div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1077,3 +1077,150 @@ body {
     margin-bottom: 15px;
   }
 }
+
+//Todo list Andrew
+
+.todolistBlock {
+  padding-top: 120px;
+  background: url(../img/bg2.png) repeat;
+}
+
+.todolistBlock .wrapper {
+  width: 70%;
+  margin-left: 15%;
+  display: block;
+}
+
+.tabToDoHeader {
+  display: block;
+  width: 100%;
+  background: #DE0603;
+  height: 70px;
+  position: relative;
+}
+
+.tabToDoHeader:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40px;
+  background: url(../img/ribbon_left.png) 0 0 no-repeat;
+  width: 40px;
+  height: 78px;
+}
+
+.tabToDoHeader:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -40px;
+  background: url(../img/ribbon_right.png) 0 0 no-repeat;
+  width: 40px;
+  height: 78px;
+}
+
+.toDoListCaption {
+  background: #fff;
+  display: inline-block;
+  float: left;
+  padding: 15px 40px;
+  font-size: 18px;
+  line-height: 40px;
+  position: relative;
+  z-index: 9999;
+  font-weight: bold;
+  color: #dd0603;
+}
+
+.toDoListCaption:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -19px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 35px 0 35px 19px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.toDoListNav {
+  display: inline-block;
+
+}
+
+.tabToDoHeader .nav-tabs {
+  border-bottom: 0px;
+}
+
+.tabToDoHeader .nav-tabs li {
+  margin-bottom: 0px;
+}
+
+
+
+.tabToDoHeader .nav-tabs > li > a {
+  margin-right: 0px;
+  font-size: 18px;
+  line-height: 40px;
+  border: 0;
+  border-radius: 0;
+  color: #fff;
+  padding: 15px 40px;
+  -webkit-text-shadow: 0 1px 0 #C80702;
+  -moz-text-shadow: 0 1px 0 #C80702;
+  text-shadow: 0 1px 0 #C80702;
+  transition: all .3s ease-in;
+}
+
+.tabToDoHeader .nav-tabs > li:first-child > a {
+  padding-left: 70px;
+
+}
+
+.tabToDoHeader .nav-tabs>li.active>a,
+.tabToDoHeader .nav-tabs>li.active>a:focus,
+.tabToDoHeader .nav-tabs>li.active>a:hover {
+  color: #fff;
+  cursor: default;
+  background-color: #AF0705;
+  border: 0;
+  border-bottom-color: transparent;
+  text-shadow: none;
+  line-height: 40px;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+  text-decoration: none;
+  background-color: #AF0705;
+}
+
+#toDoListContent{
+  margin-top: 50px;
+}
+
+.mediaContainer{
+  width: 150px;
+  height: 150px;
+}
+
+.media{
+  padding: 10px 0;
+}
+
+.media-left{
+  padding: 0 20px;
+}
+
+.media-responsive {
+  display: block;
+  max-height: 100%;
+  width: auto;
+  margin: 0 auto;
+}
+
+.media-body{
+  vertical-align: middle;
+}
+
+//End
